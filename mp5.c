@@ -17,6 +17,7 @@ void main()
  else
  {
   pid2 = fork();
+  wait(NULL);
   if(pid2==0){
    printf("CCC \n");
   }
