@@ -1,5 +1,5 @@
-//1.
-//2.
+//1. 
+//2. Salida: CCC AAA BBB. Si que podría generarse otra salida ya que el padre no espera al hijo
 //codigo modificado
 #include <stdio.h>
 #include <stdlib.h>
