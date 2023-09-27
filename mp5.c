@@ -12,14 +12,17 @@ void main()
  pid1 = fork();
  if (pid1==0)
  {
- printf("BBB \n");
+  printf("BBB \n");
  }
  else
  {
- wait(NULL);
- pid2 = fork();
- wait(NULL);
- printf("CCC \n");
+  pid2 = fork();
+  if(pid2==0){
+   printf("CCC \n");
+  }
+  else{
+   wait(NULL);
+  }
  }
  exit(0);
 }
