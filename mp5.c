@@ -16,8 +16,8 @@ void main()
  }
  else
  {
-  pid2 = fork();
   wait(NULL);
+  pid2 = fork();
   if(pid2==0){
    printf("CCC \n");
   }
