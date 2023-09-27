@@ -24,7 +24,6 @@ void main()
 	else{
 		pid2=fork();
 		wait(NULL);
-		
 		if(pid2==0){
 			printf("Soy el proceso P3 ... ppid = %d pid= %d \n",getppid(),getpid());
 		}
