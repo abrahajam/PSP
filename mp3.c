@@ -22,8 +22,9 @@ void main()
 		printf("DESPIERTO\n");
 	}
 	else{
-		pid2=fork();
+		
 		wait(NULL);
+		pid2=fork();
 		if(pid2==0){
 			printf("Soy el proceso P3 ... ppid = %d pid= %d \n",getppid(),getpid());
 		}
