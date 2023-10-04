@@ -8,6 +8,12 @@ void main()
 {
 	pid_t pid,pid2,pid3;
 	
+	if(getpid()%2==0){
+		printf("Soy el proceso P1 pid = %d ppid= %d \n",getpid(),getppid());
+	}
+	else{
+		printf("Soy el proceso P1 pid = %d \n",getpid());
+	}
 	pid=fork();
 	
 	if(pid==0){
@@ -19,9 +25,15 @@ void main()
 		}
 	}
 	else{
-		wait(NULL);
 		pid2=fork();
+		wait(NULL);
 		if(pid2==0){
+			if(getpid()%2==0){
+			printf("Soy el proceso P3 pid = %d ppid= %d 	\n",getpid(),getppid());
+			}
+			else{
+			printf("Soy el proceso P3 pid = %d \n",getpid());
+			}
 			pid3=fork();
 			if(pid3==0){
 				if(getpid()%2==0){
@@ -33,22 +45,10 @@ void main()
 			}
 			else{
 				wait(NULL);
-				if(getpid()%2==0){
-				printf("Soy el proceso P3 pid = %d ppid= %d \n",getpid(),getppid());
-				}
-				else{
-						printf("Soy el proceso P3 pid = %d \n",getpid());
-				}
 			}
 		}
 		else{
 			wait(NULL);
-			if(getpid()%2==0){
-			printf("Soy el proceso P1 pid = %d ppid= %d \n",getpid(),getppid());
-			}
-			else{
-					printf("Soy el proceso P1 pid = %d \n",getpid());
-			}
 		}
 			 
 	}
