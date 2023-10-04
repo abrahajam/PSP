@@ -1,5 +1,3 @@
-//1.
-//2. AAA CCC CCC BBB. Sí, la salida podría ser diferente por los diferentes forks ademas de que el los padres no esperana a sus hijos por lo que podria salir cualquier cosa
 //Código modificado.
 #include <stdio.h>
 #include <stdlib.h>
