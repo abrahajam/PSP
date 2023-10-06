@@ -37,19 +37,16 @@ void main(){
 					printf("Soy el proceso P6 pid = %d pid abuelo = %d \n",getpid(),pid_abuelo);		
 				}
 				else{
-				wait(NULL);
-							
+				wait(NULL);			
 				}		
 			}
 			else{
 			wait(NULL);
-		
 			}
 		}
 	}
 	else{
-		wait(NULL);
-			
+		wait(NULL);	
 	}
 	exit(0);
 }
