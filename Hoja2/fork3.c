@@ -26,8 +26,8 @@ void main(){
 			}
 		}
 		else{
-		printf("Soy el proceso P2 pid = %d \n",getpid());		
-		pid_abuelo=getpid();
+			printf("Soy el proceso P2 pid = %d \n",getpid());		
+			pid_abuelo=getpid();
 			pid3=fork();
 			wait(NULL);
 			if(pid3==0){
