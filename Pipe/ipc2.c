@@ -7,7 +7,7 @@ void main(){
 
      int fd[2]; 
      char buffer[30];
-     int num;
+     char num;
      pid_t pid;
     
      // Creamos el pipe
@@ -20,16 +20,12 @@ void main(){
      
      {
      		int suma=0;
-     		int num2=0;
-     		
+     		char num2=0;
+     		printf("\t Mensaje leido del pipe: %d \n", num2);
                 close(fd[1]); // Cierra el descriptor de escritura
-		while (buffer!="+"){
-			if(buffer!="+"){
-			read (fd[0],buffer,2);
-                	printf("\t Número a sumar %s \n", buffer);
-			}
-			
-		}
+                     		printf("\t Mensaje leido del pipe: %d \n", num2);
+                read (fd[0],&num2,sizeof(char));
+                printf("\t Mensaje leido del pipe: %d \n", num2);
                 
      }
      
@@ -38,14 +34,8 @@ void main(){
      {
                 close(fd[0]); // Cierra el descriptor de lectura
                 
-                
-                write(fd[1],"12",2);
-                write(fd[1],"22",2);
-                write(fd[1],"32",2);
-                write(fd[1],"42",2);
-                write(fd[1],"+",1);
-                
-                
+                scanf("%hhd",&num);
+                write(fd[1],&num,sizeof(char));
                 
                 wait(NULL);    
      }
