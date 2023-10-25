@@ -23,12 +23,14 @@ void main(){
      		int num2=0;
      		
                 close(fd[1]); // Cierra el descriptor de escritura
-
-                read (fd[0],&num2,sizeof(int));
-                printf("\t Número a sumar %d \n", num2);
-                suma = num2;
-                printf("\t La suma total es igual a: %d \n", suma);
-     
+		while (buffer!="+"){
+			if(buffer!="+"){
+			read (fd[0],buffer,2);
+                	printf("\t Número a sumar %s \n", buffer);
+			}
+			
+		}
+                
      }
      
      else
@@ -36,8 +38,12 @@ void main(){
      {
                 close(fd[0]); // Cierra el descriptor de lectura
                 
-                scanf("%d",&num);
-                write(fd[1],&num,sizeof(int));
+                
+                write(fd[1],"12",2);
+                write(fd[1],"22",2);
+                write(fd[1],"32",2);
+                write(fd[1],"42",2);
+                write(fd[1],"+",1);
                 
                 
                 
