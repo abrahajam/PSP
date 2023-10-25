@@ -24,8 +24,8 @@ void main(){
      		char num2=0;
                 close(fd[1]); // Cierra el descriptor de escritura
                      		
-                read (fd[0],&num2,sizeof(char));
-                printf("\t Numero a sumar: %hhd \n", num2);
+                read (fd[0],buffer,sizeof(buffer));
+                printf("\t Numero a sumar: %s\n", buffer);
                 
      }
      
@@ -35,16 +35,14 @@ void main(){
                 close(fd[0]); // Cierra el descriptor de lectura
                 
                
-                while(sumar){
-                if(num!='+'){
-                	scanf("%hhd",&num);
-                	write(fd[1],&num,sizeof(char));
-                }
-                else{
-                sumar = false;
-                }
+                
                 	
-                }
+              	write(fd[1],"12123",5);
+              	write(fd[1],"43251",5);
+              	write(fd[1],"62323",5);
+              	write(fd[1],"82143",5);
+                
+                
                 wait(NULL);    
      }
      
