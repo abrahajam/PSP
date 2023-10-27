@@ -22,14 +22,11 @@ void main(){
      		char num2;
         	while (1) {
         		read(fd[0], buffer,2); 
-
-        		
-            	        if(buffer[1]=='+'){
-            	        	printf("\tRecibido carácter +\n");
-            	        	break;
-            	        }
+            	        printf("\tNumero a sumar:s %s\n",buffer);
+            	        	
             	        
         	}
+        	 printf("\tLa suma total es: %d\n",suma);
      }
      else
      
