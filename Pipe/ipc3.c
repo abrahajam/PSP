@@ -24,18 +24,18 @@ void main(){
      if (pid==0)
      
      {
-     		close(fd[1]); // Cierra el descriptor de escritura
-     		
+     		close(fd[0]); // Cierra el descriptor de escritura
+     		srand((unsigned) time(&t));
+              	numero1 = rand()%50;
+              	numero2 = rand()%50;
+               write (fd[1],numero1,sizeof(numero1));
+              	write (fd[1],numero2,sizeof(numero2));
      }
      else
      
      {
-                close(fd[0]); // Cierra el descriptor de lectura
-                srand((unsigned) time(&t));
-              	numero1 = rand()%50;
-              	numero2 = rand()%50;
-              	printf("\tNumero a sumar: %d\n",numero1);
-		printf("\tNumero a sumar: %d\n",numero2);
+               close(fd[0]); // Cierra el descriptor de lectura
+               
               	
      			wait(NULL);
         
