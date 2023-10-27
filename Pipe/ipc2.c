@@ -2,13 +2,10 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/wait.h> 
-#include<stdbool.h>
 void main(){
 
      int fd[2]; 
-     char buffer[30];
-     char num;
-     bool sumar = true;
+     char buffer[2];
      pid_t pid;
     
      // Creamos el pipe
@@ -20,31 +17,31 @@ void main(){
      if (pid==0)
      
      {
-     		int suma=0;
-     		char num2=buffer;
-     		
-                close(fd[1]); // Cierra el descriptor de escritura
-                 
-                read (fd[0],buffer,sizeof(buffer));
-                printf("\t Numero a sumar: %s\n", buffer);
+     		close(fd[1]); // Cierra el descriptor de escritura
+     		int suma=0,num=0;
+     		char num2;
+        	while (1) {
+        		read(fd[0], buffer,2); 
+
+        		
+            	        if(buffer[1]=='+'){
+            	        	printf("\tRecibido carácter +\n");
+            	        	break;
+            	        }
+            	        
+        	}
      }
      else
      
      {
                 close(fd[0]); // Cierra el descriptor de lectura
-                
-               
-                
-                	
-              	write(fd[1],"12123",5);
-              	write(fd[1],"43251",5);
-              	write(fd[1],"62323",5);
-              	write(fd[1],"82143",5);
-              	write(fd[1],"+",1);
-                
-                
-                wait(NULL);    
-     }
-     
+               write (fd[1],"12",2);
+               write (fd[1],"22",2);
+               write (fd[1],"32",2);
+               write (fd[1],"42",2);
+               write (fd[1],"+",1);
+              	
+     			wait(NULL);
         
+     }
 }
