@@ -24,9 +24,9 @@ void main(){
      		printf("\tNumero a sumar es: %s\n",buffer);
         	while (1) {
         		read(fd[0], buffer,2); 
-			
+			suma+= (int )buffer;
             	       if(buffer[0]=='+'){
-            	       printf("\tCarácter + detectado\n");
+            	       printf("\tRecibido carácter +\n");
             	       break;
             	       }
             	       printf("\tNumero a sumar es: %s\n",buffer);
