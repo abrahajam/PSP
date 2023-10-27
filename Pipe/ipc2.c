@@ -20,10 +20,17 @@ void main(){
      		close(fd[1]); // Cierra el descriptor de escritura
      		int suma=0,num=0;
      		char num2;
+     		read(fd[0], buffer,2); 
+     		printf("\tNumero a sumar es: %s\n",buffer);
         	while (1) {
         		read(fd[0], buffer,2); 
-            	        printf("\tNumero a sumar:s %s\n",buffer);
-            	        	
+			
+            	       if(buffer[0]=='+'){
+            	       printf("\tCarácter + detectado\n");
+            	       break;
+            	       }
+            	       printf("\tNumero a sumar es: %s\n",buffer);
+          	        	
             	        
         	}
         	 printf("\tLa suma total es: %d\n",suma);
@@ -36,7 +43,7 @@ void main(){
                write (fd[1],"22",2);
                write (fd[1],"32",2);
                write (fd[1],"42",2);
-               write (fd[1],"+",1);
+               write (fd[1],"+",2);
               	
      			wait(NULL);
         
