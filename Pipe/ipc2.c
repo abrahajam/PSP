@@ -31,15 +31,15 @@ void main(){
      			printf("\tNumero a sumar es: %s\n",buffer);
      			while (1) {
         			read(fd[0], buffer,2);
-            	 	if(buffer[0]=='+'){
-            	       printf("\tRecibido carácter +\n");
-            	       break;
-            	    }
-            	    else{
-			numero = atoi(buffer);//convierte a int
-            	        suma += numero;
-            	       	printf("\tNumero a sumar es: %s\n",buffer);
-            	    }
+            	 		if(buffer[0]=='+'){
+            	       			printf("\tRecibido carácter +\n");
+            	       			break;
+            	    		}
+            	    		else{
+					numero = atoi(buffer);//convierte a int
+            	        		suma += numero;
+            	       			printf("\tNumero a sumar es: %s\n",buffer);
+            	    		}
         		}
      		}	
      		printf("\tLa suma total es: %d\n",suma);
