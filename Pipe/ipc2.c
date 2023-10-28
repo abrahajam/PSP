@@ -27,7 +27,7 @@ void main(){
      		}
      		else{
      			numero = atoi(buffer);
-            	suma += numero;
+            		suma += numero;
      			printf("\tNumero a sumar es: %s\n",buffer);
      			while (1) {
         			read(fd[0], buffer,2);
@@ -36,7 +36,7 @@ void main(){
             	       break;
             	    }
             	    else{
-					 	numero = atoi(buffer);//convierte a int
+			numero = atoi(buffer);//convierte a int
             	        suma += numero;
             	       	printf("\tNumero a sumar es: %s\n",buffer);
             	    }
