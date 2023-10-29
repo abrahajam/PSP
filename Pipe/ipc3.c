@@ -12,7 +12,7 @@ void main(){
      pid_t pid;
      time_t t;
      int numero1,numero2;
-    
+
      // Creamos el pipe
      pipe(fd); 
      
@@ -25,8 +25,9 @@ void main(){
      		close(fd[0]); // Cierra el descriptor de escritura
      		srand((unsigned) time(&t));
      		
-              	numero1 = rand()%50;
-              	numero2 = rand()%50;
+              	numero1 = rand()%51+1;
+              	
+              	numero2 = rand()%51+1;
               	
               	sprintf(num1,"%d",numero1);
               	sprintf(num2,"%d",numero2);
@@ -53,6 +54,8 @@ void main(){
                printf("%d * %d = %d\n",numero1,numero2,mut);
                div = numero1 / numero2;
                printf("%d / %d = %d\n",numero1,numero2,div);
+               
+               
         
      }
 }
