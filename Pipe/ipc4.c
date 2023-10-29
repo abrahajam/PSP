@@ -27,7 +27,6 @@ void main(){
      		char factorial1[7];
      		
      		read(fd[0],buffer,2);
-     		close(fd[0]);
      		numero2 = atoi(buffer);
      		numero3 = numero2;
 
@@ -36,8 +35,8 @@ void main(){
      			numero2--;
      		}
 			
-			sprintf(factorial1,"%d",factorial);
-			write(fd2[1],factorial1,sizeof(factorial1));
+		sprintf(factorial1,"%d",factorial);
+		write(fd2[1],factorial1,sizeof(factorial1));
      }
      else
      {
@@ -48,7 +47,6 @@ void main(){
      	num = rand()%11;
      	sprintf(num1,"%d",num);
      	write (fd[1],num1,sizeof(num));
-     	close(fd[1]);
         printf("\t El proceso padre genera el numero %s en el pipe \n", num1);
         
         wait(NULL);
