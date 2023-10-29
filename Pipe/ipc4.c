@@ -45,7 +45,7 @@ void main(){
      	close(fd2[1]);
      	
      	srand((unsigned) time(&t));
-     	num = rand()%10;
+     	num = rand()%11;
      	sprintf(num1,"%d",num);
      	write (fd[1],num1,sizeof(num));
      	close(fd[1]);
