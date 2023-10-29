@@ -22,7 +22,7 @@ void main(){
      if (pid==0)
      
      {
-     		close(fd[0]); // Cierra el descriptor de escritura
+     		close(fd[0]); // Cierra el descriptor de lectura
      		srand((unsigned) time(&t));
      		
               	numero1 = rand()%51+1;
@@ -39,7 +39,7 @@ void main(){
      
      {
      		wait(NULL);
-               close(fd[1]); // Cierra el descriptor de lectura
+               close(fd[1]); // Cierra el descriptor de escritura
                
                read(fd[0],buffer,2);
                numero1 = atoi(buffer);
