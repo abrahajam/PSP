@@ -56,12 +56,6 @@ public class SocketClientBolsa {
 
 // ------------------------------------------------------------- SOLUCION-----------------------------------------------------------
 
-Entendido, el enunciado proporciona una descripción clara de lo que se requiere para el servidor y el cliente. Para cumplir con los requisitos, necesitaremos implementar las partes faltantes en el código proporcionado.
-
-Primero, debemos completar la implementación de la clase accionbolsa agregando los constructores y métodos necesarios para el manejo de los datos de las acciones bursátiles. Luego, en el servidor (SocketServerBolsa.java), debemos implementar la lógica para manejar las consultas de los clientes y enviar los resultados correspondientes. Por último, en el cliente (SocketClientBolsa.java), necesitamos implementar la lógica para solicitar la información deseada y mostrar los resultados recibidos del servidor.
-
-A continuación, proporcionaré una implementación para cada parte:
-
 ----- Clase accionbolsa: -----
 
 import java.io.Serializable;
@@ -188,7 +182,7 @@ public class SocketClientBolsa {
     }
 }
 
-Esta implementación cumple con los requisitos proporcionados en el enunciado. El servidor espera consultas de clientes, busca la acción solicitada y envía el resultado de vuelta al cliente. El cliente solicita la acción al usuario, la envía al servidor, recibe la respuesta y la muestra en la consola.
 
-// NOTA IMPORTANTE: Esto es de chatgpt, asique prueba y si va bien adaptalo a tu estilo y cambia nombres de variable y eso
+
+// TODO: Implementación inicial. Se debe testear y refactorizar código para que sea mas legible
 
