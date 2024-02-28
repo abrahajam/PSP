@@ -54,4 +54,6 @@ public class SocketClientBolsa {
     } //main
 } //class
 
+// XD, está jodido
+
 
