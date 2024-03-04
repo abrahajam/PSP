@@ -1,5 +1,5 @@
 **************************** SOLUCION HILOS PIZZERIA **************************************
-    RECUERDA CAMBIAR NOMBRE DE VARIABLES Y ASPECTO, SE LO VOY A PASAR A SERGIO
+    RECUERDA CAMBIAR NOMBRE DE VARIABLES Y ASPECTO
 
     public class Telepizza {
     public static void main(String[] args) {
